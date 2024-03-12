@@ -1,9 +1,11 @@
-### Description:
+### Task Reminder
+
+## Description:
 API serves as the backend for a task management application. It allows users to create, update, assign, and manage tasks efficiently. The API also includes user authentication functionality to ensure secure access to the system.
 
 ---
 
-### Functional Requirements:
+## Functional Requirements:
 1. **User Authentication:**
    - Users should be able to register, log in, and manage their accounts securely.
   
@@ -25,7 +27,7 @@ API serves as the backend for a task management application. It allows users to 
 
 ---
 
-### Non-Functional Requirements:
+## Non-Functional Requirements:
 1. **Security:**
    - Implement secure user authentication mechanisms.
    - Protect sensitive data and endpoints from unauthorized access.
@@ -45,11 +47,11 @@ API serves as the backend for a task management application. It allows users to 
 
 ---
 
-### Getting Started:
+## Getting Started:
 1. Clone the repository.
-2. Install dependencies using `npm install` or `pip install requirements.txt`.
+2. Install dependencies using `pip install requirements.txt`.
 3. Set up the database configurations in `settings.py`.
 4. Run the Django server using `python manage.py runserver`.
-5. Access the API endpoints at `http://localhost:8000/api/`.
+5. Access the API endpoints at `http://localhost:8000/`.
 
 For detailed API usage instructions, refer to the full documentation provided in the project repository.
