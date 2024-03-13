@@ -1,0 +1,14 @@
+[
+    {   
+        "model": "tasks.task",
+        "pk": 1,
+        "fields": { 
+            "title": "First Task",
+            "description": "First description",
+            "assigned_to": 1,
+            "deadline": "2024-03-31T12:00:00Z",
+            "priority": 2,
+            "completed": false
+        }
+    }
+]
