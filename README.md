@@ -1,4 +1,4 @@
-### Task Reminder
+# Task Reminder
 
 ## Description:
 API serves as the backend for a task management application. It allows users to create, update, assign, and manage tasks efficiently. The API also includes user authentication functionality to ensure secure access to the system.
