@@ -9,17 +9,29 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = '__all__'
 
+"""
+Serializer for user login.
+"""
 class UserLoginSerializer(TokenObtainPairSerializer):
-    @classmethod
-    def get_token(cls, user):
-        token = super().get_token(user)
+    """
+    Include additional user data in the response.
+    """
+    def validate(self, attrs):
+        data = super().validate(attrs)
+        
+        data["user"] = {
+            "id": self.user.id,
+            "username": self.user.username,
+            "email": self.user.email,
+            "is_admin": self.user.is_admin
+        }
 
-        print(user)
-        token['username'] = user.username
-        token['email'] = user.email
-
-        return token
+        return data
     
+"""
+Serializer for user registration.
+Handles user registration data validation and user creation.
+"""
 class UserRegisterSerializer(serializers.ModelSerializer):
     password = serializers.CharField(
         write_only=True, required=True, validators=[validate_password])

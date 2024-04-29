@@ -1,8 +1,16 @@
 [
-    {   
-        "model": "tasks.task",
+    {
+        "model": "tasks.folder",
         "pk": 1,
-        "fields": { 
+        "fields": {
+            "name": "First Folder",
+            "assigned_to": 2
+        }
+    },
+    {
+        "model": "tasks.task",
+        "pk": "6bcb72f0-099b-416d-8b2c-fcd0bef76cbf",
+        "fields": {
             "title": "First Task",
             "description": "First description",
             "assigned_to": 1,
@@ -11,27 +19,136 @@
             "completed": false
         }
     },
-    {   
+    {
         "model": "tasks.task",
-        "pk": 2,
-        "fields": { 
+        "pk": "8f5e87d5-d727-4e1e-9a1a-1f5c5e25b50d",
+        "fields": {
             "title": "Second Task",
             "description": "Second description",
-            "assigned_to": 1,
+            "assigned_to": 3,
             "deadline": "2024-03-31T12:00:00Z",
             "priority": 4,
             "completed": false
         }
     },
-    {   
+    {
         "model": "tasks.task",
-        "pk": 3,
-        "fields": { 
+        "pk": "c9504b9a-8a1b-49e3-940e-7f9e09a91684",
+        "fields": {
             "title": "Third Task",
             "description": "Third description",
-            "assigned_to": 1,
+            "assigned_to": 2,
             "deadline": "2024-03-31T12:00:00Z",
             "priority": 3,
+            "completed": false,
+            "folder_id": 1
+        }
+    },
+    {
+        "model": "tasks.task",
+        "pk": "077e523a-2b90-4c41-9254-2b82d8c056e2",
+        "fields": {
+            "title": "Fourth Task",
+            "description": "Fourth description",
+            "assigned_to": 3,
+            "deadline": "2024-04-15T09:00:00Z",
+            "priority": 1,
+            "completed": false
+        }
+    },
+    {
+        "model": "tasks.task",
+        "pk": "25c5c26c-a71e-422e-8c5a-b8a5c20a8212",
+        "fields": {
+            "title": "Fifth Task",
+            "description": "Fifth description",
+            "assigned_to": 1,
+            "deadline": "2024-04-10T15:30:00Z",
+            "priority": 2,
+            "completed": false
+        }
+    },
+    {
+        "model": "tasks.task",
+        "pk": "3f8a868c-2645-4b55-836e-2b81a1e8f5e1",
+        "fields": {
+            "title": "Sixth Task",
+            "description": "Sixth description",
+            "assigned_to": 2,
+            "deadline": "2024-04-05T11:45:00Z",
+            "priority": 3,
+            "completed": false
+        }
+    },
+    {
+        "model": "tasks.task",
+        "pk": "b09b3d17-612c-4d61-9e7a-e8c5089f83f8",
+        "fields": {
+            "title": "Seventh Task",
+            "description": "Seventh description",
+            "assigned_to": 3,
+            "deadline": "2024-04-20T10:00:00Z",
+            "priority": 2,
+            "completed": false
+        }
+    },
+    {
+        "model": "tasks.task",
+        "pk": "255e6a98-0e3a-471c-9f6a-a859983d5e74",
+        "fields": {
+            "title": "Eighth Task",
+            "description": "Eighth description",
+            "assigned_to": 1,
+            "deadline": "2024-04-25T14:15:00Z",
+            "priority": 4,
+            "completed": false
+        }
+    },
+    {
+        "model": "tasks.task",
+        "pk": "c06b2f5f-a38b-4d8e-8546-1a193e31f9a1",
+        "fields": {
+            "title": "Ninth Task",
+            "description": "Ninth description",
+            "assigned_to": 3,
+            "deadline": "2024-04-30T08:30:00Z",
+            "priority": 1,
+            "completed": false
+        }
+    },
+    {   
+        "model": "tasks.task",
+        "pk": "98f5c235-a12b-4e86-9133-8a93a3522c99",
+        "fields": { 
+            "title": "Tenth Task",
+            "description": "Tenth description",
+            "assigned_to": 2,
+            "deadline": "2024-05-05T09:45:00Z",
+            "priority": 3,
+            "completed": false
+        }
+    },
+    {   
+        "model": "tasks.task",
+        "pk": "5a86e3de-5e35-427d-873b-e12a7f5288c3",
+        "fields": { 
+            "title": "Eleventh Task",
+            "description": "Eleventh description",
+            "assigned_to": 1,
+            "deadline": "2024-05-10T16:30:00Z",
+            "priority": 2,
+            "completed": false
+        }
+    },
+    {   
+        "model": "tasks.task",
+        "pk": "12d26b64-e674-4586-922f-5564a815c516",
+        "fields": { 
+            "title": "Twelfth Task",
+            "description": "Twelfth description",
+            "assigned_to": 3,
+            "deadline": "2024-05-15T11:00:00Z",
+            "priority": 1,
             "completed": false
         }
     }

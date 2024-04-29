@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "task_reminder",
+            "database": "db_task_reminder_dev",
+            "username": "postgres",
+            "password": "postgres"
+        }
+    ]
+}

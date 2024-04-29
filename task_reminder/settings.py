@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'corsheaders',
     'rest_framework',
+    'rest_framework_simplejwt',
     
     'apps.users',
     'apps.tasks',
@@ -53,6 +55,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'task_reminder.urls'
@@ -101,12 +105,12 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    # },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    # },
 ]
 
 
@@ -136,17 +140,17 @@ REST_FRAMEWORK = {
 	'DEFAULT_AUTHENTICATION_CLASSES': [
     	'rest_framework_simplejwt.authentication.JWTAuthentication',
 	],
-    'DEFAULT_PERMISSIONS_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated'
-    ]
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10,
 }
 
 AUTH_USER_MODEL = 'users.User'
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'TOKEN_OBTAIN_SERIALIZER': 'apps.users.serializers.UserLoginSerializer',
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=180),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
-    'SLIDING_TOKEN_LIFETIME': timedelta(days=30),
-    'SLIDING_TOKEN_REFRESH_LIFETIME_LATE_USER': timedelta(days=1),
-    'SLIDING_TOKEN_LIFETIME_LATE_USER': timedelta(days=30),
+    'UPDATE_LAST_LOGIN': True,
 }
+
+CORS_ORIGIN_ALLOW_ALL = True

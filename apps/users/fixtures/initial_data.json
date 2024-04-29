@@ -1,11 +1,39 @@
 [
-    {   
+    {
         "model": "users.user",
         "pk": 1,
-        "fields": { 
+        "fields": {
             "username": "UserOne",
             "email": "userone@gmail.com",
-            "password": "12345678"
+            "password": "pbkdf2_sha256$720000$P36P4JCSHNrqrjELvHPf3R$nV9ZZZkHRSKJ/Bsda69+co1Qv4SrGrb06Q6pEeaWt0U="
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 2,
+        "fields": {
+            "username": "UserTwo",
+            "email": "usertwo@gmail.com",
+            "password": "pbkdf2_sha256$720000$P36P4JCSHNrqrjELvHPf3R$nV9ZZZkHRSKJ/Bsda69+co1Qv4SrGrb06Q6pEeaWt0U="
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 3,
+        "fields": {
+            "username": "UserThree",
+            "email": "userthree@gmail.com",
+            "password": "pbkdf2_sha256$720000$P36P4JCSHNrqrjELvHPf3R$nV9ZZZkHRSKJ/Bsda69+co1Qv4SrGrb06Q6pEeaWt0U="
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 4,
+        "fields": {
+            "username": "Admin",
+            "email": "admin@gmail.com",
+            "password": "pbkdf2_sha256$720000$P36P4JCSHNrqrjELvHPf3R$nV9ZZZkHRSKJ/Bsda69+co1Qv4SrGrb06Q6pEeaWt0U=",
+            "is_admin": true
         }
     }
 ]
